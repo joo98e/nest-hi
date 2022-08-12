@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { MoviesController } from './movies/movies.controller';
+import { MoviesService } from './movies/movies.service';
+import { TestController } from './test/test.controller';
 
 /**
  * @description 데코레이터
@@ -9,7 +10,7 @@ import { AppService } from './app.service';
  */
 @Module({
   imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [MoviesController, TestController],
+  providers: [MoviesService],
 })
 export class AppModule {}
